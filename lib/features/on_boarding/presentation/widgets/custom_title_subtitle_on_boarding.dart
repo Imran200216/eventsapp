@@ -45,7 +45,7 @@ class CustomTitleSubtitleOnBoarding extends StatelessWidget {
           subTitleText,
           style: GoogleFonts.montserrat(
             color: AppColors.subTitleTextColor,
-            fontSize: 13,
+            fontSize: 14,
             fontWeight: FontWeight.w400,
           ),
         ),

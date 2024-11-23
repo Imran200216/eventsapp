@@ -8,6 +8,8 @@ class CustomBtn extends StatelessWidget {
   final String btnTitleText;
   final double btnTitleTextFontSize;
   final VoidCallback onTap;
+  final Color btnColor;
+  final Color btnTitleTextColor;
 
   const CustomBtn({
     super.key,
@@ -16,6 +18,7 @@ class CustomBtn extends StatelessWidget {
     required this.btnTitleText,
     required this.btnTitleTextFontSize,
     required this.onTap,
+    required this.btnColor, required this.btnTitleTextColor,
   });
 
   @override
@@ -27,13 +30,13 @@ class CustomBtn extends StatelessWidget {
         width: btnWidth,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
-          color: AppColors.primaryColor,
+          color: btnColor,
         ),
         child: Center(
           child: Text(
             btnTitleText,
             style: GoogleFonts.montserrat(
-              color: AppColors.btnTitleColor,
+              color: btnTitleTextColor,
               fontSize: btnTitleTextFontSize,
               fontWeight: FontWeight.w600,
             ),

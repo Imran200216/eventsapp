@@ -1,3 +1,4 @@
+import 'package:eventsapp/features/auth/presentation/pages/auth_intro_screen.dart';
 import 'package:eventsapp/features/auth/presentation/pages/login_screen.dart';
 import 'package:eventsapp/features/auth/presentation/pages/register_screen.dart';
 import 'package:eventsapp/features/on_boarding/presentation/pages/on_boarding_first_screen.dart';
@@ -32,6 +33,15 @@ class AppRouterConfig {
         name: "onBoardingSecondScreen",
         builder: (context, state) {
           return const OnBoardingSecondScreen();
+        },
+      ),
+
+      /// auth intro screen
+      GoRoute(
+        path: "/authIntroScreen",
+        name: "authIntroScreen",
+        builder: (context, state) {
+          return const AuthIntroScreen();
         },
       ),
 
