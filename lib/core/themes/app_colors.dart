@@ -8,4 +8,6 @@ class AppColors {
   static const btnTitleColor = Color(0xFFFFFFFF);
   static const textFieldBgColor = Color(0xFF292929);
   static const safeAreaColor = Color(0xFF34D2C1);
+  static const titleTextColor = Color(0xFFFFFFFF);
+  static const subTitleTextColor = Color(0xFFCCCCCC);
 }

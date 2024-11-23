@@ -1,5 +1,6 @@
 import 'package:eventsapp/core/routes/app_router_config.dart';
 import 'package:eventsapp/core/themes/app_colors.dart';
+import 'package:eventsapp/core/themes/app_text_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,6 +21,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        textTheme: AppTextThemes.darkTextTheme,
+      ),
       routerConfig: AppRouterConfig().router,
       title: 'Flutter Demo',
       theme: ThemeData(
