@@ -46,7 +46,7 @@ class CustomAuthTextField extends StatelessWidget {
             color: AppColors.primaryColor,
             width: 1.4,
           ),
-          borderRadius: BorderRadius.circular(30), // Rounded corners
+          borderRadius: BorderRadius.circular(30),
         ),
         contentPadding: const EdgeInsets.symmetric(
           vertical: 20,

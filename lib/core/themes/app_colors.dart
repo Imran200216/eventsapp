@@ -11,4 +11,6 @@ class AppColors {
   static const titleTextColor = Color(0xFFFFFFFF);
   static const subTitleTextColor = Color(0xFFCCCCCC);
   static const lightColoredBtnTextTitleColor = Color(0xFF474747);
+  static const textBtnTextColor = Color(0xFF615AD4);
+  static const eventCardBgColor = Color(0xFF292929);
 }
