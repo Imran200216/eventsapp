@@ -30,7 +30,7 @@ class BottomNavBar extends StatelessWidget {
           return Scaffold(
             backgroundColor: AppColors.scaffoldBgColor,
             bottomNavigationBar: BottomNavigationBar(
-              backgroundColor: Colors.black,
+              backgroundColor: AppColors.scaffoldBgColor,
               onTap: (index) {
                 context.read<BottomNavBloc>().add(BottomNavIndexChanged(index));
               },

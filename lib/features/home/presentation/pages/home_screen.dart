@@ -1,5 +1,7 @@
 import 'package:eventsapp/core/themes/app_colors.dart';
+import 'package:eventsapp/features/home/presentation/widgets/custom_event_home_card.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -79,13 +81,28 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Container(
-                height: 180,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: AppColors.eventCardBgColor,
-                ),
+              ListView.separated(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: 24,
+                itemBuilder: (context, index) {
+                  return CustomEventHomeCard(
+                    eventTitle: "Event title",
+                    onFavoriteTap: () {},
+                    eventDate: "05/11/2002",
+                    onCardTap: () {
+                      context.pushNamed("eventDescriptionScreen");
+                    },
+                    eventImg:
+                        "https://plus.unsplash.com/premium_photo-1670315264879-59cc6b15db5f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return const SizedBox(
+                    height: 12,
+                  );
+                },
               ),
             ],
           ),

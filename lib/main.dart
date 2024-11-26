@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           textTheme: AppTextThemes.darkTextTheme,
         ),
+
         routerConfig: AppRouterConfig().router,
         title: 'Flutter Demo',
         theme: ThemeData(

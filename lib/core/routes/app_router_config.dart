@@ -3,6 +3,7 @@ import 'package:eventsapp/features/auth/presentation/pages/auth_intro_screen.dar
 import 'package:eventsapp/features/auth/presentation/pages/login_screen.dart';
 import 'package:eventsapp/features/auth/presentation/pages/register_screen.dart';
 import 'package:eventsapp/features/bottom_nav_bar/presentation/pages/bottom_nav_bar.dart';
+import 'package:eventsapp/features/event_description/presentation/pages/event_description_screen.dart';
 import 'package:eventsapp/features/feeds/presentation/pages/feeds_screen.dart';
 import 'package:eventsapp/features/home/presentation/pages/home_screen.dart';
 import 'package:eventsapp/features/on_boarding/presentation/pages/on_boarding_first_screen.dart';
@@ -14,6 +15,7 @@ import 'package:go_router/go_router.dart';
 
 class AppRouterConfig {
   GoRouter router = GoRouter(
+    initialLocation: "/bottomNavBar",
     routes: [
       /// splash screen
       GoRoute(
@@ -120,6 +122,15 @@ class AppRouterConfig {
         name: "profileScreen",
         builder: (context, state) {
           return const ProfileScreen();
+        },
+      ),
+
+      /// event description screen
+      GoRoute(
+        path: "/eventDescriptionScreen",
+        name: "eventDescriptionScreen",
+        builder: (context, state) {
+          return const EventDescriptionScreen();
         },
       ),
     ],
