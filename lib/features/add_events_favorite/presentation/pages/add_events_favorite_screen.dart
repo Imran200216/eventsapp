@@ -1,4 +1,5 @@
 import 'package:eventsapp/core/themes/app_colors.dart';
+import 'package:eventsapp/features/commons/widgets/custom_no_item_added_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -35,6 +36,14 @@ class AddEventsFavoriteScreen extends StatelessWidget {
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
               ),
+            ),
+            const Spacer(),
+            const CustomNoItemAddedWidget(
+              text: "No favorites events enrolled!",
+              iconName: "no-favorites-events-added-icon",
+            ),
+            const Spacer(
+              flex: 2,
             ),
           ],
         ),

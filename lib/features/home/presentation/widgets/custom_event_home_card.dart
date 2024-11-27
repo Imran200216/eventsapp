@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eventsapp/core/themes/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomEventHomeCard extends StatelessWidget {
   final String eventTitle;
@@ -60,8 +61,14 @@ class CustomEventHomeCard extends StatelessWidget {
           ),
         ),
         title: Text(eventTitle),
+        titleTextStyle: GoogleFonts.montserrat(
+          color: AppColors.secondaryColor,
+        ),
         subtitle: Text(
           eventDate,
+        ),
+        subtitleTextStyle: GoogleFonts.montserrat(
+          color: AppColors.subTitleTextColor,
         ),
         trailing: IconButton(
           onPressed: onFavoriteTap,

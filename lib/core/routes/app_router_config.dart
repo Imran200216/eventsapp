@@ -1,11 +1,14 @@
 import 'package:eventsapp/features/add_events/presentation/pages/add_events_screen.dart';
+import 'package:eventsapp/features/all_news_feeds_description/presentation/pages/all_news_feeds_description_screen.dart';
 import 'package:eventsapp/features/auth/presentation/pages/auth_intro_screen.dart';
 import 'package:eventsapp/features/auth/presentation/pages/login_screen.dart';
 import 'package:eventsapp/features/auth/presentation/pages/register_screen.dart';
 import 'package:eventsapp/features/bottom_nav_bar/presentation/pages/bottom_nav_bar.dart';
 import 'package:eventsapp/features/event_description/presentation/pages/event_description_screen.dart';
 import 'package:eventsapp/features/feeds/presentation/pages/feeds_screen.dart';
+import 'package:eventsapp/features/headline_news_feeds_description/presentation/pages/headlines_news_feeds_description_screen.dart';
 import 'package:eventsapp/features/home/presentation/pages/home_screen.dart';
+import 'package:eventsapp/features/notification/presentation/pages/notification_screen.dart';
 import 'package:eventsapp/features/on_boarding/presentation/pages/on_boarding_first_screen.dart';
 import 'package:eventsapp/features/on_boarding/presentation/pages/on_boarding_second_screen.dart';
 import 'package:eventsapp/features/profile/presentation/pages/profile_screen.dart';
@@ -14,8 +17,8 @@ import 'package:eventsapp/features/splash/presentation/pages/splash_screen.dart'
 import 'package:go_router/go_router.dart';
 
 class AppRouterConfig {
-  GoRouter router = GoRouter(
-    initialLocation: "/bottomNavBar",
+  static GoRouter router = GoRouter(
+    initialLocation: "/",
     routes: [
       /// splash screen
       GoRoute(
@@ -131,6 +134,33 @@ class AppRouterConfig {
         name: "eventDescriptionScreen",
         builder: (context, state) {
           return const EventDescriptionScreen();
+        },
+      ),
+
+      /// all news feeds description screen
+      GoRoute(
+        path: "/allNewsFeedsDescriptionScreen",
+        name: "allNewsFeedsDescriptionScreen",
+        builder: (context, state) {
+          return const AllNewsFeedsDescriptionScreen();
+        },
+      ),
+
+      /// headline news feeds description screen
+      GoRoute(
+        path: "/headlineNewsFeedsDescriptionScreen",
+        name: "headlineNewsFeedsDescriptionScreen",
+        builder: (context, state) {
+          return const HeadlinesNewsFeedsDescriptionScreen();
+        },
+      ),
+
+      /// notification screen
+      GoRoute(
+        path: "/notificationScreen",
+        name: "notificationScreen",
+        builder: (context, state) {
+          return const NotificationScreen();
         },
       ),
     ],

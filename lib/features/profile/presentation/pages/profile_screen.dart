@@ -2,6 +2,7 @@ import 'package:eventsapp/core/themes/app_colors.dart';
 import 'package:eventsapp/features/profile/presentation/widgets/custom_profile_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -101,7 +102,9 @@ class ProfileScreen extends StatelessWidget {
                 CustomProfileListTile(
                   iconName: "notification-icon",
                   titleName: "Notification",
-                  onTap: () {},
+                  onTap: () {
+                    context.pushNamed("notificationScreen");
+                  },
                 ),
 
                 const SizedBox(
@@ -109,7 +112,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
 
                 CustomProfileListTile(
-                  iconName: "signout-icon",
+                  iconName: "sign-out-icon",
                   titleName: "Signout",
                   onTap: () {},
                 ),
