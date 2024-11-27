@@ -1,6 +1,7 @@
 import 'package:eventsapp/core/themes/app_colors.dart';
 import 'package:eventsapp/features/auth/presentation/widgets/custom_auth_text_field.dart';
 import 'package:eventsapp/features/commons/widgets/custom_btn.dart';
+import 'package:eventsapp/features/commons/widgets/custom_image_picker_modal_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -64,7 +65,19 @@ class ProfileSetUpScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return CustomImagePickerModalSheet(
+                          onPickImageFromGallery: () {},
+                          onPickImageFromCamera: () {},
+                          modalSheetTitle:
+                              "Enroll your profile by picking anyone!",
+                        );
+                      },
+                    );
+                  },
                   child: Text(
                     "Add Photo",
                     style: GoogleFonts.montserrat(

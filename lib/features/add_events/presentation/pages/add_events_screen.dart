@@ -3,6 +3,7 @@ import 'package:eventsapp/core/themes/app_colors.dart';
 import 'package:eventsapp/features/add_events/presentation/widgets/custom_events_max_line_text_field.dart';
 import 'package:eventsapp/features/add_events/presentation/widgets/custom_events_text_field.dart';
 import 'package:eventsapp/features/commons/widgets/custom_btn.dart';
+import 'package:eventsapp/features/commons/widgets/custom_image_picker_modal_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +49,18 @@ class AddEventsScreen extends StatelessWidget {
 
               /// upload an image
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) {
+                      return CustomImagePickerModalSheet(
+                        onPickImageFromGallery: () {},
+                        onPickImageFromCamera: () {},
+                        modalSheetTitle: "Enroll your event by picking anyone!",
+                      );
+                    },
+                  );
+                },
                 child: DottedBorder(
                   borderType: BorderType.RRect,
                   radius: const Radius.circular(12),
